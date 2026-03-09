@@ -48,3 +48,44 @@ OcuLaunch solves this using just a **standard webcam** and **open-source compute
 ---
 
 ## 🧠 How It Works
+📷 Webcam Feed
+↓
+👁️ MediaPipe Face Mesh → Extract eye landmarks
+↓
+📐 EAR Algorithm → Calculate Eye Aspect Ratio
+↓
+🤖 ML Model → Classify: Eye OPEN or Eye CLOSED
+↓
+😑😑 Double Blink Detected → Launch App
+↓
+🖐️ MediaPipe Hands → Navigate between apps
+
+---
+
+## 📁 Project Structure
+eye_project/
+│
+├── 📓 01_data_collection.ipynb       ← Capture eye photos (open/closed)
+├── 📓 02_feature_extraction.ipynb    ← Extract EAR features from photos
+├── 📓 03_model_training.ipynb        ← Train and compare ML models
+├── 📓 04_model_testing.ipynb         ← Live webcam testing
+├── 🐍 05_hands_free_navigator.py     ← Hand gesture navigation system
+│
+├── 📂 dataset/
+│   ├── open/                         ← Eyes open photos
+│   └── closed/                       ← Eyes closed (blink) photos
+│
+├── blink_model.pkl                   ← Trained blink classifier
+├── scaler.pkl                        ← Feature scaler
+├── features.csv                      ← Extracted features dataset
+├── collection_summary.csv            ← Photo collection log
+
+## 🔮 Future Scope
+
+- [ ] Add gaze estimation for precise cursor control
+- [ ] Replace double blink with customizable blink patterns
+- [ ] Mobile version using front-facing camera
+- [ ] Voice + blink multimodal control
+- [ ] Real-time per-user calibration system
+- [ ] Integration with wheelchair control systems
+- [ ] Web browser extension support
