@@ -68,8 +68,7 @@ eye_project/
 ├── 📓 01_data_collection.ipynb       ← Capture eye photos (open/closed)
 ├── 📓 02_feature_extraction.ipynb    ← Extract EAR features from photos
 ├── 📓 03_model_training.ipynb        ← Train and compare ML models
-├── 📓 04_model_testing.ipynb         ← Live webcam testing
-├── 🐍 05_hands_free_navigator.py     ← Hand gesture navigation system
+├── 🐍 04_hands_free_navigator.py     ← Hand gesture navigation system
 │
 ├── 📂 dataset/
 │   ├── open/                         ← Eyes open photos
